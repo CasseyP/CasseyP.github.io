@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition-duration: 0.5s;
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*BUTTON*/
+.altbutton {
+    padding-top: 50px;
+}
+
+/* Button Format - From Uiverse.io by gagan-gv */
+.btn {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(190, 218, 227);
+    border-radius: 80px;
+    border: none;
+    transition: all .2s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn span {
+    position: absolute;
+    z-index: 99;
+    width: 150px;
+    height: 50px;
+    border-radius: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: #eeeeed;
+    background-color: #003147;
+    padding: 0 10px;
+}
+
+.btn .container {
+    display: flex;
+    width: 150px;
+    border-radius: 80px;
+    line-height: 50px;
+    justify-content: center;
+}
+
+.btn svg {
+    padding: 0 5px;
+    opacity: 0;
+}
+
+.btn .container svg:nth-of-type(1) {
+    transition-delay: 0.65s;
+}
+
+.btn .container svg:nth-of-type(2) {
+    transition-delay: 0.8s;
+}
+
+.container svg:nth-of-type(3) {
+    transition-delay: 0.5s;
+}
+
+.btn:hover span {
+    opacity: 0;
+}
+
+.btn:hover svg {
+    opacity: 1;
+}
+
+
+/* RESUME PAPER */
+.resupaper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1200px;
+    margin: 50px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(3px 3px 3px #373737)
+}
+
+/* POPUP */
+.popup {
+    position: absolute;
+    z-index: 1;
+    opacity: 20%;
+    mix-blend-mode: darken;
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    30% {
+        transform: scale(1.4, 1.1);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+#bounce {
+    animation: 0.7s bounce;
+}
+
+
+.popup img {
+    width: 1000px;
+    margin-top: 275px;
+}
+
+.open-popup {
+    display: none;
+}
+
+/* LEFT SIDE */
+.resupaper .lside {
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+
+.proftext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.proftext #pic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.proftext #pic img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.proftext h2 {
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4rem;
+}
+
+.proftext h2 span {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+
+/* Contacts Part */
+.contacts {
+    padding-top: 20px;
+}
+
+.contitle {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contacts ul {
+    position: relative;
+}
+
+.contacts ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contacts ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+    transition: none;
+}
+
+.contacts ul li span {
+    color: white;
+    font-weight: 300;
+    font-size: 13.2px;
+}
+
+
+
+/* Socials Part */
+.socials .contitle {
+    margin-top: 30px;
+}
+
+.socials ul {
+    position: relative;
+}
+
+.socials ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.socials ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+    transition: none;
+}
+
+.socials ul li span {
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
+
+/* Skills Part */
+.skills .contitle {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.skills {
+    flex-grow: 8;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.skills h4 {
+    color: white;
+    font-weight: 350;
+}
+
+.skillbar {
+    display: flex;
+    border: solid white;
+    height: 14px;
+    border-radius: 10px;
+}
+
+.skill .whitebar {
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.skill .bluebar {
+    background-color: #03a9f4;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.skill .flexg1 {
+    flex-grow: 1;
+}
+
+.skill .flexg2 {
+    flex-grow: 2;
+}
+
+.skill .flexg3 {
+    flex-grow: 3;
+}
+
+.skill .flexg4 {
+    flex-grow: 4;
+}
+
+.skill .flexg5 {
+    flex-grow: 5;
+}
+
+.skill .flexg6 {
+    flex-grow: 6;
+}
+
+
+
+
+/* RIGHT SIDE */
+.resupaper .rside {
+    position: relative;
+    background-color: white;
+    padding: 40px;
+}
+
+/* Profile Part */
+.about {
+    margin-bottom: 30px;
+}
+
+.about :last-child {
+    margin-bottom: 0;
+}
+
+.abouttxt {
+    color: #003147;
+    letter-spacing: 1px;
+}
+
+.abouttxt i {
+    margin-right: 10px;
+}
+
+.about .abouttxt i {
+    padding-right: 8px;
+}
+
+p {
+    color: #333;
+    padding-left: 38px;
+    text-indent: 2rem;
+}
+
+/* Educational Background Part */
+
+.schoolinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.school {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+.school .slogo {
+    width: 50px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.school img {
+    width: 40px;
+}
+
+.school h4,
+.awards h4 {
+    font-size: 1.2rem;
+    color: #03a9f4;
+}
+
+.school h5 {
+    font-size: 0.9rem;
+}
+
+.school h6,
+.awards h6 {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+
+
+/* Award Part */
+.awards {
+    margin-top: 20px;
+}
+
+.awards h2.abouttxt {
+    padding-bottom: 15px;
+}
+
+.award {
+    padding-left: 33px;
+    margin-bottom: 15px;
+}
+
+.award h6 {
+    padding-left: 32px;
+}
+
+.award .abouttxt h4 {
+    font-weight: 100px;
+}
