@@ -2,7 +2,7 @@ let prevBox = null;
 let isActive = false;
 
 function displayBox(dayb) {
-    if (isActive) return; 
+    if (isActive) return;
     isActive = true;
 
     const buttonColor = getComputedStyle(document.querySelector(`.${dayb}`)).backgroundColor;
@@ -11,21 +11,21 @@ function displayBox(dayb) {
 
     if (prevBox) {
         prevBox.style.backgroundColor = prevBox.style.borderColor;
-        prevBox.style.top = "-700px"; 
+        prevBox.style.top = "-700px";
         prevBox.style.borderWidth = "10px";
         prevBox.style.transition = "top 1.3s ease-out, background-color 1.3s ease-out, border-width 1.3s ease-out";
 
         setTimeout(() => {
-            isActive = false; 
-        }, 1000); 
+            isActive = false;
+        }, 1000);
     } else {
-        isActive = false; 
+        isActive = false;
     }
 
     const newBox = document.createElement("div");
 
     newBox.style.position = "absolute";
-    newBox.style.width = "300px"; 
+    newBox.style.width = "300px";
     newBox.style.height = "300px";
     newBox.style.left = "50%";
     newBox.style.top = "-300px";
@@ -34,7 +34,7 @@ function displayBox(dayb) {
     newBox.style.border = `10px solid ${buttonColor}`;
     newBox.style.borderRadius = "15px";
     newBox.style.transition = "top 1.3s ease-out, background-color 1.3s ease-out, border-width 1.3s ease-out";
-     
+
     document.body.appendChild(newBox);
 
     setTimeout(() => {
