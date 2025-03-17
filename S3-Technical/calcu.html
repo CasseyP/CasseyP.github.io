@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cassie Calculator</title>
+    <title>Cassi Calculator</title>
     <link rel="stylesheet" href="calcustyle.css">
     <script src="calcuscript.js" defer></script>
+    <link rel="icon" href="https://freepngimg.com/thumb/paper_sheet/54461-5-calculator-png-image-high-quality.png">
 </head>
+
 <body>
     <div class="main-container">
         <div class="calcu">
@@ -15,27 +18,29 @@
                 <div class="result" id="result"></div>
             </div>
             <div class="buttons">
-                <div class="button" id = "clear" onclick="clearResult(), selectedBtn('clear')">C</div>
-                <div class="button" id = "back" onclick="backResult(), selectedBtn('back')"><</div>
-                <div class="button" id = "divide" onclick="addToScreen('/'), selectedBtn('divide')">/</div>
-                <div class="button" id = "multiply" onclick="addToScreen('*'), selectedBtn('multiply')">x</div>
-                <div class="button" id = "7" onclick="addToScreen('7'), selectedBtn('7')">7</div>
-                <div class="button" id = "8" onclick="addToScreen('8'), selectedBtn('8')">8</div>
-                <div class="button" id = "9" onclick="addToScreen('9'), selectedBtn('9')">9</div>
-                <div class="button" id = "subtract" onclick="addToScreen('-'), selectedBtn('subtract')">-</div>
-                <div class="button" id = "4" onclick="addToScreen('4'), selectedBtn('4')">4</div>
-                <div class="button" id = "5" onclick="addToScreen('5'), selectedBtn('5')">5</div>
-                <div class="button" id = "6" onclick="addToScreen('6'), selectedBtn('6')">6</div>
-                <div class="button" id = "add" onclick="addToScreen('+'), selectedBtn('add')">+</div>
-                <div class="button" id = "1" onclick="addToScreen('1'), selectedBtn('1')">1</div>
-                <div class="button" id = "2" onclick="addToScreen('2'), selectedBtn('2')">2</div>
-                <div class="button" id = "3" onclick="addToScreen('3'), selectedBtn('3')">3</div>
-                <div class="button" id = "equal" onclick="computeResult(), selectedBtn('equal')">=</div>
-                <div class="button" id = "zero" onclick="addToScreen('0'), selectedBtn('zero')">0</div>
-                <div class="button" id = "." onclick="addToScreen('.'), selectedBtn('.')">.</div>
+                <div class="button" id="clear" onclick="clearResult(), selectedBtn('clear')">C</div>
+                <div class="button" id="back" onclick="backResult(), selectedBtn('back')">
+                    << /div>
+                        <div class="button" id="divide" onclick="addToScreen('/'), selectedBtn('divide')">/</div>
+                        <div class="button" id="multiply" onclick="addToScreen('*'), selectedBtn('multiply')">x</div>
+                        <div class="button" id="7" onclick="addToScreen('7'), selectedBtn('7')">7</div>
+                        <div class="button" id="8" onclick="addToScreen('8'), selectedBtn('8')">8</div>
+                        <div class="button" id="9" onclick="addToScreen('9'), selectedBtn('9')">9</div>
+                        <div class="button" id="subtract" onclick="addToScreen('-'), selectedBtn('subtract')">-</div>
+                        <div class="button" id="4" onclick="addToScreen('4'), selectedBtn('4')">4</div>
+                        <div class="button" id="5" onclick="addToScreen('5'), selectedBtn('5')">5</div>
+                        <div class="button" id="6" onclick="addToScreen('6'), selectedBtn('6')">6</div>
+                        <div class="button" id="add" onclick="addToScreen('+'), selectedBtn('add')">+</div>
+                        <div class="button" id="1" onclick="addToScreen('1'), selectedBtn('1')">1</div>
+                        <div class="button" id="2" onclick="addToScreen('2'), selectedBtn('2')">2</div>
+                        <div class="button" id="3" onclick="addToScreen('3'), selectedBtn('3')">3</div>
+                        <div class="button" id="equal" onclick="computeResult(), selectedBtn('equal')">=</div>
+                        <div class="button" id="zero" onclick="addToScreen('0'), selectedBtn('zero')">0</div>
+                        <div class="button" id="." onclick="addToScreen('.'), selectedBtn('.')">.</div>
 
+                </div>
             </div>
         </div>
-    </div>
 </body>
+
 </html>
