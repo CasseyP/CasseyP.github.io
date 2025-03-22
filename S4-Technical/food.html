@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guide</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5402/5402824.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="foodstyle.css">
+    <script src="foodscript.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container">
+            <div>
+                <h4 class="title-one">Best of Merridien</h4>
+                <h1 class="title-two">Restaurant Guide</h1>
+                <h2 class="text-white title-three">Produced by: Local Magazine</h2>
+            </div>
+            <div class="menu-container">
+                <button class="text-white" onclick="showHome()"> <b>MAIN MENU</b> </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOME - MENU -->
+    <div id="homePage" class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+            <div class="col" id="col-one"></div>
+            <div class="col">
+                <div class="card menu-card" onclick="showDetails('menu1')">
+                    <div class="card-header">Gabel Loffel</div>
+                    <img src="pics/dish2.jpg" alt="Gabel Loffel">
+                    <div class="card-footer">
+                        <hr>
+                        <p>Get out your Lederhosen!</p>
+                        <hr>
+                        <i class="bi bi-play-circle"> More</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card menu-card" onclick="showDetails('menu2')">
+                    <div class="card-header">Gary Gari</div>
+                    <img src="pics/dish3.jpg" alt="Gary Gari">
+                    <div class="card-footer">
+                        <hr>
+                        <p>The delicious headquarters for all your ginger-related needs!</p>
+                        <hr>
+                        <i class="bi bi-play-circle"> More</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card menu-card" onclick="showDetails('menu3')">
+                    <div class="card-header">Il Piatto</div>
+                    <img src="pics/dish1.jpg" alt="Il Piatto">
+                    <div class="card-footer">
+                        <hr>
+                        <p>Kid-friendly Italian Fun!</p>
+                        <hr>
+                        <i class="bi bi-play-circle"> More</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card menu-card" onclick="showDetails('menu4')">
+                    <div class="card-header">Pierre Platters</div>
+                    <img src="pics/dish4.png" alt="Pierre Platters">
+                    <div class="card-footer">
+                        <hr>
+                        <p>Smart talks. Smart eats!</p>
+                        <hr>
+                        <i class="bi bi-play-circle"> More</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT CARDS -->
+    <div class="content-card" id="menu1">
+        <div class="row">
+            <div class="col-1 name-container">
+                <h1 class="sidename scale">Gabel Loffel</h1>
+            </div>
+            <div class="images col-5">
+                <img src="pics/dish2.jpg" alt="Gabel Loffel">
+            </div>
+            <div class="desc col">
+                <h1 class="title-content">Gabel Loffel</h1>
+                <div class="info d-flex">
+                    <div class="resto-info location col-6">
+                        <p><b>HIGHLAND, MERRIDIEN CITY</b><br> <b>T: =</b> 490 24 6709<br> <b>W:</b> GANDG.RES</p>
+                    </div>
+                    <div class="resto-info col-6" id="leftinfo">
+                        <p><b>CATEGORY:</b> German Cuisine<br> <b>OPEN:</b> 10AM to 10PM<br> <b>PRICE:</b> $$$</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="fooddesc">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, aliquam. Accusantium porro nobis,
+                    nihil repellendus laboriosam, dolores illo, deserunt id repellat dolorum quasi dignissimos
+                    consequatur nesciunt? Et sed earum itaque reiciendis, at veniam velit, quas distinctio ab aperiam
+                    nisi necessitatibus rerum minima cumque totam, quae adipisci aliquid minus. Aliquam nihil fugiat
+                    voluptatibus eaque nobis iste eum blanditiis alias at beatae vero, mollitia ab illo voluptates
+                    suscipit rem quos culpa cupiditate nam excepturi, consectetur cum natus. Suscipit minus dignissimos
+                    consectetur ducimus rem assumenda at, quia, nesciunt ipsa reiciendis provident alias distinctio
+                    culpa blanditiis enim quod. Recusandae eaque error voluptatum amet temporibus. </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-card" id="menu2">
+        <div class="row">
+            <div class="col-1 name-container">
+                <h1 class="sidename scale">Gary Gari</h1>
+            </div>
+            <div class="images col-5">
+                <img src="pics/dish3.jpg" alt="Gary Gari">
+            </div>
+            <div class="desc col">
+                <h1 class="title-content">Gary Gari</h1>
+                <div class="info d-flex">
+                    <div class="resto-info location col-6">
+                        <p><b>SHOUTOUT WAY, MERRIDIEN CITY</b><br> <b>T: =</b> 490 24 6709<br> <b>W:</b> GANDG.RES</p>
+                    </div>
+                    <div class="resto-info col-6" id="leftinfo">
+                        <p><b>CATEGORY:</b> Mexican<br> <b>OPEN:</b> 10AM to 10PM<br> <b>PRICE:</b> $$$</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="fooddesc">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem nesciunt repudiandae deleniti,
+                    dolores eum cumque qui alias voluptas quam ullam iste, fuga accusantium totam blanditiis a sunt id
+                    suscipit, sint quia. Nemo qui dolorem veniam a? Ratione commodi, officiis reiciendis adipisci
+                    consectetur enim optio vero ut laborum quia distinctio magnam officia, perspiciatis, ex non
+                    assumenda iusto modi nisi rerum dignissimos. Expedita praesentium placeat asperiores quae reiciendis
+                    unde tenetur ad! Dolore eveniet maxime architecto quam, impedit quibusdam atque eos tenetur, fugiat
+                    iste suscipit vel consequuntur possimus magnam nam facere odio ut, expedita quas voluptatem
+                    dignissimos exercitationem iure minus. Ipsam, nemo obcaecati! </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content-card" id="menu3">
+        <div class="row">
+            <div class="col-1 name-container">
+                <h1 class="sidename scale">Il Piatto</h1>
+            </div>
+            <div class="images col-5">
+                <img src="pics/dish1.jpg" alt="Gary Gari">
+            </div>
+            <div class="desc col">
+                <h1 class="title-content">Il Piatto</h1>
+                <div class="info d-flex">
+                    <div class="resto-info location col-6">
+                        <p><b>GLENDALE, MERRIDIEN CITY</b><br> <b>T: =</b> 490 24 6709<br> <b>W:</b> GANDG.RES</p>
+                    </div>
+                    <div class="resto-info col-6" id="leftinfo">
+                        <p><b>CATEGORY:</b> Italian<br> <b>OPEN:</b> 10AM to 10PM<br> <b>PRICE:</b> $$$</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="fooddesc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis et error officiis doloribus sit
+                    cupiditate dolore ducimus voluptatem minus suscipit ratione odit ex tempora molestias, rerum, earum,
+                    enim neque dolorem culpa veritatis! Deleniti, corrupti. Eius hic sint repellat voluptates dolores
+                    reprehenderit neque ipsum, earum ea corrupti, aspernatur, repudiandae magnam nihil accusantium
+                    accusamus commodi ex quisquam veniam quo porro modi aperiam fugiat. Quis eos doloremque vero
+                    temporibus recusandae dolorum corporis facere, repellat quo officiis quibusdam asperiores voluptates
+                    nisi similique minima modi ipsa quaerat explicabo excepturi unde soluta? Expedita nemo est, enim sit
+                    provident iusto? Quae nihil, delectus aperiam debitis saepe eaque. </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-card" id="menu4">
+        <div class="row">
+            <div class="col-1 name-container">
+                <h1 class="sidename scale">Pierre Platters</h1>
+            </div>
+            <div class="images col-5">
+                <img src="pics/dish4-cropped.png" alt="Gary Gari">
+            </div>
+            <div class="desc col">
+                <h1 class="title-content">Pierre Platters</h1>
+                <div class="info d-flex">
+                    <div class="resto-info location col-6">
+                        <p><b>8TH AVE., MERRIDIEN CITY</b><br> <b>T: =</b> 490 24 6709<br> <b>W:</b> GANDG.RES</p>
+                    </div>
+                    <div class="resto-info col-6" id="leftinfo">
+                        <p><b>CATEGORY:</b> Japanese<br> <b>OPEN:</b> 10AM to 10PM<br> <b>PRICE:</b> $$$</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="fooddesc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita cupiditate quia vitae, neque
+                    perspiciatis nisi et eum quam, quas voluptatum velit aliquam itaque rerum, saepe fugit nobis
+                    architecto nulla ducimus sit omnis ipsam. Ratione provident voluptas quae, id eum ab cum, impedit
+                    maxime ipsa quia cupiditate perspiciatis assumenda odit! Tempora dolorum autem maxime debitis error
+                    explicabo veritatis hic? Saepe commodi architecto praesentium ipsa inventore mollitia. Quae
+                    repudiandae quibusdam voluptas perferendis obcaecati porro ipsa quia maxime, ex suscipit delectus
+                    numquam vero adipisci quisquam distinctio expedita blanditiis tenetur, saepe facere impedit iusto!
+                    Mollitia inventore vitae ducimus iusto non numquam sit dolorum eaque. </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

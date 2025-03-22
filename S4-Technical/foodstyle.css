@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lexend:wght@100..900&family=Norican&display=swap');
+
+body {
+    background: url('pics/kitchen-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    margin: 20px;
+}
+
+.menu-card {
+    transition: transform 0.3s;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    position: relative;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content-card {
+    display: none;
+    background: rgba(255, 255, 255, 0.823);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    margin-left: 25dvw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    height: auto;
+    /* opacity: 0;
+    transition: opacity 0.3s ease-in-out; */
+}
+
+
+@media (max-width: 992px) {
+    #col-one.col {
+        display: none;
+    }
+
+    .content-card {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .col-5 {
+        flex: 0 0 auto;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .row {
+        --bs-gutter-x: 1.5rem;
+    }
+
+    .content-card {
+        margin-left: 0;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .name-container {
+        font-size: 14px;
+    }
+
+    .col-5 {
+        flex: 0 0 auto;
+        width: 90%;
+    }
+
+    .desc h1 {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    #col-one {
+        display: none;
+    }
+
+    .info #leftinfo {
+        border-left: none;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .col-5 {
+        flex: 0 0 auto;
+        width: 90%;
+    }
+
+    .content-card {
+        flex-direction: column;
+        margin-left: 20dvw;
+    }
+
+    .name-container {
+        font-size: 12px;
+    }
+
+    .desc h1 {
+        font-size: 1.2rem;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    #col-one {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1238px) {
+    .row {
+        --bs-gutter-x: 1.5rem;
+    }
+
+    .content-card {
+        margin-left: 20dvw;
+    }
+}
+
+
+
+#leftinfo {
+    border-left: 2px solid rgba(128, 128, 128, 0.421);
+    height: 80%;
+    padding-left: 30px;
+}
+
+.name-container {
+    background: #363333;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.images img {
+    height: 100%;
+}
+
+
+
+
+.desc h1 {
+    font-size: 1.8rem;
+    color: #E63946;
+}
+
+.card-header {
+    background: rgba(52, 58, 64, 0.8);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu-card:hover .card-footer {
+    opacity: 1;
+}
+
+.title-one {
+    color: #E63946;
+    font-family: "Norican", cursive;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+
+}
+
+.title-two {
+    color: #FFC107;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.title-three {
+    font-family: "Lexend", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.title-content {
+    color: #E63946;
+    font-family: "Norican", cursive;
+    font-size: 30px;
+}
+
+/* From Uiverse.io by mrhyddenn */
+button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(114, 0, 0);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+button:hover {
+    background: rgb(114, 0, 0);
+    box-shadow: 0 0 30px 5px rgba(127, 0, 0, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
