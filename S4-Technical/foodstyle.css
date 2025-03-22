@@ -14,8 +14,6 @@ body {
 }
 
 .menu-card {
-    transition: transform 0.3s;
-    cursor: pointer;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -41,11 +39,28 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
+
+#homePage,
+.content-card,
+.menu-card {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#homePage.show,
+.content-card.show,
+.menu-card.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 .content-card {
     display: none;
+    opacity: 0;
     background: rgba(255, 255, 255, 0.823);
     padding: 20px;
     border-radius: 10px;
@@ -54,10 +69,103 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 70%;
     height: auto;
-    /* opacity: 0;
-    transition: opacity 0.3s ease-in-out; */
 }
 
+#leftinfo {
+    border-left: 2px solid rgba(128, 128, 128, 0.421);
+    height: 80%;
+    padding-left: 30px;
+}
+
+.name-container {
+    background: #363333;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.images img {
+    height: 100%;
+}
+
+.desc h1 {
+    font-size: 1.8rem;
+    color: #E63946;
+}
+
+.card-header {
+    background: rgba(52, 58, 64, 0.8);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+
+.card-footer {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu-card:hover .card-footer {
+    opacity: 1;
+}
+
+.title-one {
+    color: #E63946;
+    font-family: "Norican", cursive;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+
+}
+
+.title-two {
+    color: #FFC107;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.title-three {
+    font-family: "Lexend", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.title-content {
+    color: #E63946;
+    font-family: "Norican", cursive;
+    font-size: 30px;
+}
 
 @media (max-width: 992px) {
     #col-one.col {
@@ -156,103 +264,7 @@ body {
 
 
 
-#leftinfo {
-    border-left: 2px solid rgba(128, 128, 128, 0.421);
-    height: 80%;
-    padding-left: 30px;
-}
 
-.name-container {
-    background: #363333;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    writing-mode: sideways-lr;
-    text-orientation: mixed;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.images img {
-    height: 100%;
-}
-
-
-
-
-.desc h1 {
-    font-size: 1.8rem;
-    color: #E63946;
-}
-
-.card-header {
-    background: rgba(52, 58, 64, 0.8);
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    position: relative;
-    z-index: 2;
-    padding: 10px;
-}
-
-.card-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.menu-card:hover .card-footer {
-    opacity: 1;
-}
-
-.title-one {
-    color: #E63946;
-    font-family: "Norican", cursive;
-    text-shadow: 2px 2px 4px #000000;
-    font-size: 2rem;
-
-}
-
-.title-two {
-    color: #FFC107;
-    text-shadow: 2px 2px 4px #000000;
-    font-family: "Great Vibes", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-}
-
-.title-three {
-    font-family: "Lexend", sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: normal;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-.title-content {
-    color: #E63946;
-    font-family: "Norican", cursive;
-    font-size: 30px;
-}
 
 /* From Uiverse.io by mrhyddenn */
 button {
